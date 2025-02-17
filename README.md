@@ -112,33 +112,3 @@ trained_model_dtde, metrics_dtde = train_dtde(
 plot_multi_agent_metrics(metrics_ctde, signal_accuracy=0.75)
 plot_multi_agent_metrics(metrics_dtde, signal_accuracy=0.75)
 ```
-
-## Implementation Classes
-
-### MultiAgentEnvironment
-
-Implements the binary state environment with:
-- Fixed true state
-- Signal generation based on accuracy parameter
-- Reward computation for multiple agents
-- Support for simultaneous agent actions
-
-### Neural Components
-
-#### CTDE Implementation
-- `DecentralizedActor`: Individual policy networks
-- `CentralizedCritic`: Global value estimation
-- `MultiAgentTrainer`: Training coordination
-
-#### DTDE Implementation
-- `DecentralizedAgent`: Complete independent agents
-- `DecentralizedActor`: Local policy networks
-- `DecentralizedCritic`: Local value estimation
-
-### MultiAgentMetricsTracker
-
-Tracks and computes various performance metrics for plotting, including:
-- Signal realizations
-- Observed rewards
-- Policies 
-- Learning rates
